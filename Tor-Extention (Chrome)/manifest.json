@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Secure Tor Proxy",
+  "version": "2.0",
+  "description": "Toggle Chrome to use local Tor SOCKS5 with WebRTC and DNS leak protection.",
+  "permissions": ["storage", "proxy", "privacy"],
+  "host_permissions": [
+    "https://api.ipify.org/*",
+    "https://check.torproject.org/*",
+    "http://ip-api.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Tor Proxy"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
